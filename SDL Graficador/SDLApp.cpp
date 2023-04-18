@@ -68,13 +68,14 @@ void SDLApp::OnLoop()
 void SDLApp::OnRender()
 {
     // Set the background color to white
-    SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);
+    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
     SDL_RenderClear(renderer);
 
-    // Draw a red rectangle
-    SDL_Rect fillRect = {150, 120, 300, 200};
-    SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
-    SDL_RenderFillRect(renderer, &fillRect);
+    //Draw Grid
+    //drawGrid();
+
+    // Draw axis
+    drawAxes();
 
     //Show the result
     SDL_RenderPresent(renderer);
@@ -85,4 +86,31 @@ void SDLApp::OnExit()
     SDL_DestroyWindow(window);
     window = NULL;
     SDL_Quit();
+}
+
+
+void SDLApp::drawAxes() {
+    SDL_SetRenderDrawColor(renderer, 0, 0, 255, 255);
+    SDL_RenderDrawLine(renderer, 0, 240, 640, 240); // X-Axis
+    for (int x = 0; x <= 320; x += 50) {
+        SDL_RenderDrawLine(renderer, 320 + x, 240 - 5, 320 + x, 240 + 5);
+        SDL_RenderDrawLine(renderer, 320 - x, 240 - 5, 320 - x, 240 + 5);
+    }
+
+    SDL_RenderDrawLine(renderer, 320, 0, 320, 480); // Y-Axis
+    for (int y = 0; y <= 240; y += 50) {
+        SDL_RenderDrawLine(renderer, 320 - 5, 240 + y, 320 + 5, 240 + y);
+        SDL_RenderDrawLine(renderer, 320 - 5, 240 - y, 320 + 5, 240 - y);
+    }
+}
+
+void SDLApp::drawGrid()
+{
+    SDL_SetRenderDrawColor(renderer, 150, 150, 150, 255);
+    for (int x = -320; x <= 320; x += 10) {
+        SDL_RenderDrawLine(renderer, 320 + x, 0, 320 + x, 480);
+    }
+    for (int y = -240; y <= 240; y += 10) {
+        SDL_RenderDrawLine(renderer, 0, 240 + y, 640, 240 + y);
+    }
 }

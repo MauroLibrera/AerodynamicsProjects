@@ -14,6 +14,9 @@ public:
     void OnRender();
     void OnExit();
 
+    void drawAxes();
+    void drawGrid();
+
 private:
     SDL_Window* window;
     SDL_Renderer* renderer;
