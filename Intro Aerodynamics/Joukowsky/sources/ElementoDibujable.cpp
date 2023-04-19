@@ -32,4 +32,14 @@ void ElementoDibujable::Trasladar(float trasX, float trasY)
         x[i] += trasX;
         y[i] += trasY;
     }
-}    
+}
+
+float* ElementoDibujable::GetX()
+{
+    return x;
+}
+
+float* ElementoDibujable::GetY()
+{
+    return y;
+}

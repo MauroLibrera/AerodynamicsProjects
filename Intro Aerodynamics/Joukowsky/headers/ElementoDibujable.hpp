@@ -20,6 +20,9 @@ public:
 
     void Escalar(float escalaX, float escalaY);
     void Trasladar(float trasX, float trasY);
+
+    float* GetX();
+    float* GetY();
 };
 
 

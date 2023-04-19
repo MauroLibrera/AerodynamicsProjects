@@ -31,13 +31,3 @@ void Circunferencia::CalculoPuntos()
         std::cout << tita[i] <<" "<< x[i] << " " << y[i] << std::endl;
     }
 }
-
-float* Circunferencia::GetX()
-{
-    return x;
-}
-
-float* Circunferencia::GetY()
-{
-    return y;
-}
