@@ -9,7 +9,7 @@
                 "-g",
                 "${workspaceFolder}/sources/*.cpp",
                 "-o",
-                "${workspaceFolder}\\${fileBasenameNoExtension}.exe",
+                "${workspaceFolder}\\main.exe",
                 "-lmingw32",
                 "-lSDL2main",
                 "-lSDL2"
