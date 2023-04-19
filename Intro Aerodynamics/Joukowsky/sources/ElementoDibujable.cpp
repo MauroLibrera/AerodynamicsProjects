@@ -5,10 +5,7 @@ ElementoDibujable::ElementoDibujable()
     N = 100;
 
     x = new float[N];
-    x = {0};
-
     y = new float[N];
-    y = {0};
 }
 
 ElementoDibujable::ElementoDibujable(float* xa, float*ya)

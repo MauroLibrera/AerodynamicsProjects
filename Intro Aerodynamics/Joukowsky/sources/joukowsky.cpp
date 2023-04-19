@@ -8,12 +8,4 @@ Joukowsky::Joukowsky(float x, float y)
 }
 
 void Joukowsky::Ejecutar()
-{
-    circ = Circunferencia(x0, y0, n);
-    circ.CalculoPuntos();
-
-    xc = circ.GetX();
-    yc = circ.GetY();
-
-    *transform = Transformada(xc, yc);
-}
+{}

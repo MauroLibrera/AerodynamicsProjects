@@ -1,5 +1,5 @@
 #include <iostream>
-#include "../headers/joukowsky.hpp"
+#include "../headers/circunferencia.hpp"
 
 int main(int argc, char* argv[])
 {
@@ -11,8 +11,8 @@ int main(int argc, char* argv[])
     std::cout << "Escribir y origen ";
     std::cin >> y;
     
-    Joukowsky transform = Joukowsky(x, y);
-    transform.Ejecutar();
+    Circunferencia circ = Circunferencia(x, y);
+    circ.CalculoPuntos();
 
     return 0;
 }
