@@ -11,6 +11,8 @@ class Circunferencia
 public:
     Circunferencia();
     Circunferencia(float x, float y);
+    
+    void CalculoPuntos();  
 
 private:
     float x0; // Coordenada x del origen
@@ -20,8 +22,6 @@ private:
 
     float* x;
     float* y;
-
-    void CalculoPuntos();  
 };
 
 #endif

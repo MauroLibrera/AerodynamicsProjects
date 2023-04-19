@@ -6,8 +6,6 @@ Circunferencia::Circunferencia()
     y0 = 0;
     N = 100;
     R = 5.0;
-
-    CalculoPuntos();
 }
 
 Circunferencia::Circunferencia(float x, float y)
@@ -16,8 +14,6 @@ Circunferencia::Circunferencia(float x, float y)
     y0 = y;
     N = 100;
     R = 5.0;
-
-    CalculoPuntos();
 }
 
 void Circunferencia::CalculoPuntos()
