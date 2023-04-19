@@ -12,7 +12,10 @@ public:
     Circunferencia();
     Circunferencia(float x, float y, int n);
 
-    void CalculoPuntos();  
+    void CalculoPuntos();
+
+    float* GetX();
+    float* GetY();
 
 private:
     float x0; // Coordenada x del origen

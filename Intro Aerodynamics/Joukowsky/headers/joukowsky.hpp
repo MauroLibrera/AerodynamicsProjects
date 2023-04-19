@@ -2,6 +2,7 @@
 #define JOUKOWSKY_H
 
 #include "circunferencia.hpp"
+#include "transformada.hpp"
 
 
 class Joukowsky
@@ -17,6 +18,7 @@ public:
 
 private:
     Circunferencia circ;
+    Transformada* transform;
 
     float* xc;
     float* yc;
