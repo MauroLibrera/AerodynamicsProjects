@@ -1,5 +1,6 @@
 #include <iostream>
 #include "../headers/circunferencia.hpp"
+#include "../headers/perfil.hpp"
 
 int main(int argc, char* argv[])
 {
@@ -13,6 +14,9 @@ int main(int argc, char* argv[])
     
     Circunferencia circ = Circunferencia(x, y);
     circ.CalculoPuntos();
+
+    perfil per = perfil(circ);
+    per.CalculoPuntos();
 
     return 0;
 }
