@@ -1,6 +1,11 @@
 #ifndef CIRCUNFERENCIA_H
 #define CIRCUNFERENCIA_H
 
+#include <math.h>
+#include <iostream>
+
+#include "common.hpp"
+
 class Circunferencia
 {
 public:
@@ -10,7 +15,7 @@ public:
 private:
     float x0; // Coordenada x del origen
     float y0; // Coordenada y del origen
-    float N;  // Cantidad de puntos
+    int N;  // Cantidad de puntos
     float R;  // Radio
 
     float* x;

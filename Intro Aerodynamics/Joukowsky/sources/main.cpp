@@ -1,4 +1,5 @@
 #include <iostream>
+#include "../headers/circunferencia.hpp"
 
 int main(int argc, char* argv[])
 {
@@ -10,6 +11,7 @@ int main(int argc, char* argv[])
     std::cout << "Escribir y origen ";
     std::cin >> y;
     
+    Circunferencia circulo = Circunferencia(x, y);
 
     return 0;
 }
