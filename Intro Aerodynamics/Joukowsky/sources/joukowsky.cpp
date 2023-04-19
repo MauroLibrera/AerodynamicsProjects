@@ -14,4 +14,6 @@ void Joukowsky::Ejecutar()
 
     xc = circ.GetX();
     yc = circ.GetY();
+
+    *transform = Transformada(xc, yc);
 }
