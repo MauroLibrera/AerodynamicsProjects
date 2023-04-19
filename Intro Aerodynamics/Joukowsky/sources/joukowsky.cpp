@@ -4,10 +4,11 @@ Joukowsky::Joukowsky(float x, float y)
 {
     x0 = x;
     y0 = y;
+    n = 100;
 }
 
 void Joukowsky::Ejecutar()
 {
-    circ = Circunferencia(x0, y0);
+    circ = Circunferencia(x0, y0, n);
     circ.CalculoPuntos();
 }

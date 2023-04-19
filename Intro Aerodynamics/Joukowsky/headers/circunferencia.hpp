@@ -10,8 +10,8 @@ class Circunferencia
 {
 public:
     Circunferencia();
-    Circunferencia(float x, float y);
-    
+    Circunferencia(float x, float y, int n);
+
     void CalculoPuntos();  
 
 private:

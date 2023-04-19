@@ -8,11 +8,11 @@ Circunferencia::Circunferencia()
     R = 5.0;
 }
 
-Circunferencia::Circunferencia(float x, float y)
+Circunferencia::Circunferencia(float x, float y, int n)
 {
     x0 = x;
     y0 = y;
-    N = 100;
+    N = n;
     R = 5.0;
 }
 

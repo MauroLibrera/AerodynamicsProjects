@@ -11,6 +11,7 @@ public:
 
     float x0;
     float y0;
+    int n;
 
     void Ejecutar();
 
