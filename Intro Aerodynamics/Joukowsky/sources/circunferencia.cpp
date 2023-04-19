@@ -4,23 +4,18 @@ Circunferencia::Circunferencia()
 {
     x0 = 0;
     y0 = 0;
-    N = 100;
     R = 5.0;
 }
 
-Circunferencia::Circunferencia(float x, float y, int n)
+Circunferencia::Circunferencia(float x, float y)
 {
     x0 = x;
     y0 = y;
-    N = n;
     R = 5.0;
 }
 
 void Circunferencia::CalculoPuntos()
 {
-    x = new float[N];
-    y = new float[N];
-
     float tita[N];
 
     float dTita = M_PI*2/static_cast<float>(N);
