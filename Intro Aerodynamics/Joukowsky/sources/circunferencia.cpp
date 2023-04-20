@@ -23,14 +23,11 @@ void Circunferencia::CalculoPuntos()
 
     float dTita = M_PI*2/static_cast<float>(N);
 
-    std::cout << "x " << " y" << std::endl;
     
     for (int i = 0; i < N; i++)
     {
         tita[i] = dTita * i; 
         x[i] = cos(tita[i]) + x0;
         y[i] = sin(tita[i]) + y0;
-
-        std::cout << tita[i] <<" "<< x[i] << " " << y[i] << std::endl;
     }
 }

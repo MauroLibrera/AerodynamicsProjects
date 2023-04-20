@@ -39,10 +39,10 @@ void SDLHandler::Bucle()
 
 }
 
-void SDLHandler::Render(int** x, int** y, int N)
+void SDLHandler::Render(float** x, float** y, int N)
 {
     // Set the background color to black
-    SDL_SetRenderDrawColor(pRenderer, 0, 0, 255, 255);
+    SDL_SetRenderDrawColor(pRenderer, 0, 0, 255, 150);
     SDL_RenderClear(pRenderer);
 
     // Color de línea
@@ -51,7 +51,9 @@ void SDLHandler::Render(int** x, int** y, int N)
     {
         for (int j = 0; j < N; j++)
         {
-            SDL_RenderDrawLine(pRenderer, x[i][j], y[i][j], x[i][(j+1)%N], y[i][(j+1)%N]);
+            SDL_RenderDrawLine(pRenderer, static_cast<int>(x[i][j]), 
+            static_cast<int>(y[i][j]), static_cast<int>(x[i][(j+1)%N]), 
+            static_cast<int>(y[i][(j+1)%N]));
         }
     }
     SDL_RenderPresent(pRenderer);

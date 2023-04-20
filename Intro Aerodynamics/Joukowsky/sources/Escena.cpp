@@ -10,9 +10,12 @@ bool Escena::Iniciar()
 {
     circulo = new Circunferencia();
     circulo->CalculoPuntos();
+    circulo->Escalar(100.0, 100.0);
+
 
     airfoil = new perfil(*circulo);
     airfoil->CalculoPuntos();
+    airfoil->Escalar(100.0,100.0);
 
     puntosHijosX[0] = circulo->GetX();
     puntosHijosX[1] = airfoil->GetX();
@@ -36,4 +39,19 @@ void Escena::Bucle()
 void Escena::Salida()
 {
 
+}
+
+float** Escena::GetPuntosX()
+{
+    return puntosHijosX;
+}
+
+float** Escena::GetPuntosY()
+{
+    return puntosHijosY;
+}
+
+int Escena::GetN()
+{
+    return circulo->N;
 }

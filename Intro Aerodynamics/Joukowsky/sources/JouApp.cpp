@@ -41,7 +41,7 @@ int JouApp::Ejecutar()
             Eventos(&evento);
         }
         EnBucle();
-        App_SDL->Render();
+        App_SDL->Render(currentScene->GetPuntosX(), currentScene->GetPuntosY(), currentScene->GetN());
     }
     Salida();
     return 0;

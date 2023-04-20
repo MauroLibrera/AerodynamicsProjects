@@ -10,7 +10,6 @@ perfil::perfil(Circunferencia c)
 
 void perfil::CalculoPuntos()
 {
-    std::cout << "x " << " y" << std::endl;
     for (int i=0; i<N; i++)
     {
         x[i] = circBase.GetX()[i] + circBase.GetX()[i]/(circBase.GetX()[i]*circBase.GetX()[i] + 
@@ -18,6 +17,5 @@ void perfil::CalculoPuntos()
         y[i] = circBase.GetY()[i] - circBase.GetY()[i]/(circBase.GetX()[i]*circBase.GetX()[i] + 
         circBase.GetY()[i]*circBase.GetY()[i]);
 
-        std::cout << x[i] << " " << y[i] << std::endl;
     }
 }

@@ -23,6 +23,11 @@ public:
     void Eventos(SDL_Event *event);
     void Bucle();
     void Salida();
+
+    float** GetPuntosX();
+    float** GetPuntosY();
+
+    int GetN();
 };
 
 #endif

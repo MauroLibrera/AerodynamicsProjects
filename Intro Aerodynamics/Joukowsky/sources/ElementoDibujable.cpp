@@ -2,7 +2,7 @@
 
 ElementoDibujable::ElementoDibujable()
 {
-    N = 100;
+    N = 1000;
 
     x = new float[N];
     y = new float[N];

@@ -8,7 +8,6 @@
 class ElementoDibujable
 {
 protected:
-    int N;
     float* x;
     float* y;
 
@@ -18,6 +17,7 @@ public:
     ElementoDibujable(/* args */);
     ElementoDibujable(float* x, float* y);
 
+    int N;
     // Transformaciones Geométricas
 
     void Escalar(float escalaX, float escalaY);

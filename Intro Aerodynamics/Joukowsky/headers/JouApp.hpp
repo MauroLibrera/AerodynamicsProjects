@@ -20,6 +20,7 @@ public:
     void Eventos(SDL_Event* event);
     void EnBucle();
     void Salida();
+    
 };
 
 #endif
