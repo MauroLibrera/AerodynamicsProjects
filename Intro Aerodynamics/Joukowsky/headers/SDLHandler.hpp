@@ -8,7 +8,6 @@ class SDLHandler
 private:
     SDL_Window* pWindow;
     SDL_Renderer* pRenderer;
-    bool isRunning;
 
 public:
     SDLHandler();
@@ -16,6 +15,7 @@ public:
     int Ejecutar();
 
     bool Iniciar();
+    void ManejoEventos();
     void Eventos(SDL_Event *event);
 
     void Bucle();

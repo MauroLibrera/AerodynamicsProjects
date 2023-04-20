@@ -2,7 +2,6 @@
 
 SDLHandler::SDLHandler()
 {
-    isRunning = true;
     pWindow = NULL;
     pRenderer = NULL;
 }
@@ -29,34 +28,10 @@ bool SDLHandler::Iniciar()
     return true;
 }
 
-int SDLHandler::Ejecutar()
-{
-    SDL_Event evento;
 
-    if (Iniciar() == false)
-    {
-        return -1;
-    }
-    
-    while (isRunning)
-    {
-        while (SDL_PollEvent(&evento) != 0)
-        {
-            Eventos(&evento);
-        }
-        Bucle();
-        Render();
-    }
-    Salida();
-    return 0;
-}
 
 void SDLHandler::Eventos(SDL_Event *evento)
 {
-    if (evento -> type == SDL_QUIT)
-    {
-        isRunning = false;
-    }
 }
 
 void SDLHandler::Bucle()
@@ -67,7 +42,7 @@ void SDLHandler::Bucle()
 void SDLHandler::Render()
 {
     // Set the background color to white
-    SDL_SetRenderDrawColor(pRenderer, 0, 0, 0, 255);
+    SDL_SetRenderDrawColor(pRenderer, 0, 0, 255, 255);
     SDL_RenderClear(pRenderer);
 }
 

@@ -1,7 +1,7 @@
 #include <iostream>
 #include "../headers/circunferencia.hpp"
 #include "../headers/perfil.hpp"
-#include "../headers/SDLHandler.hpp"
+#include "../headers/JouApp.hpp"
 
 int main(int argc, char* argv[])
 {
@@ -21,8 +21,7 @@ int main(int argc, char* argv[])
     per.CalculoPuntos();
     ***/
 
-   SDLHandler app;
-   app.Ejecutar();
+   JouApp app;
 
-    return 0;
+    return app.Ejecutar();
 }
