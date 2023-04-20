@@ -42,6 +42,7 @@ int JouApp::Ejecutar()
 void JouApp::Eventos(SDL_Event* evento)
 {
     App_SDL->Eventos(evento);
+    
     if (evento -> type == SDL_QUIT)
     {
         ejecutando = false;
