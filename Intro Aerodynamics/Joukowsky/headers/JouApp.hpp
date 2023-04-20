@@ -2,12 +2,14 @@
 #define JOU_APP_H
 
 #include "SDLHandler.hpp"
+#include "Escena.hpp"
 
 class JouApp
 {
 private:
     bool ejecutando;
     SDLHandler* App_SDL;
+    Escena* currentScene;
 
 public:
     JouApp(/* args */);

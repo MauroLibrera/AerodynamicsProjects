@@ -4,16 +4,24 @@ JouApp::JouApp()
 {
     ejecutando = true;
     App_SDL = NULL;
+    currentScene = NULL;
 }
 
 bool JouApp::Iniciar()
 {
     App_SDL = new SDLHandler();
+    currentScene = new Escena();
 
     if (App_SDL->Iniciar() == false)
     {
         return false;
     }
+
+    if (currentScene->Iniciar() == false)
+    {
+        return false;
+    }
+
     return true;
 }
 
@@ -42,7 +50,7 @@ int JouApp::Ejecutar()
 void JouApp::Eventos(SDL_Event* evento)
 {
     App_SDL->Eventos(evento);
-    
+
     if (evento -> type == SDL_QUIT)
     {
         ejecutando = false;
