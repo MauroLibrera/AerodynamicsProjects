@@ -10,11 +10,15 @@
 class Escena
 {
 private:
+    float escalaBasica;
+
     float* puntosHijosX[2];
     float* puntosHijosY[2];
 
     Circunferencia* circulo;
     perfil* airfoil;
+
+    void ActualizarPuntos();
 
 public:
     Escena(/* args */);
