@@ -20,7 +20,7 @@ public:
 
     void Bucle();
 
-    void Render();
+    void Render(int** x, int** y, int N);
     void Salida();
 };
 
