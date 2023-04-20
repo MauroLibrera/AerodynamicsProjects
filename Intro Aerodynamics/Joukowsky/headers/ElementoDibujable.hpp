@@ -11,6 +11,8 @@ protected:
     int N;
     float* x;
     float* y;
+
+    int r, g, b, a;
     
 public:
     ElementoDibujable(/* args */);

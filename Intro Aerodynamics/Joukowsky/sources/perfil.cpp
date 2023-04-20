@@ -4,6 +4,8 @@ perfil::perfil(Circunferencia c)
 {
     circBase = c;
     cuerda = 1;
+    r = 0; 
+    g, b, a = 255;
 }
 
 void perfil::CalculoPuntos()
