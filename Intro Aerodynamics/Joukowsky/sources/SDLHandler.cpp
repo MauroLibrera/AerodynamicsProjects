@@ -48,7 +48,7 @@ void SDLHandler::Render(float** x, float** y, int N)
 
     // Color de línea
     SDL_SetRenderDrawColor(pRenderer, 255, 255, 255, 255);
-    for (int i=0; i<2; i++)
+    for (int i=0; i<3; i++)
     {
         //std::cout<<i<<std::endl;
         for (int j = 0; j < N; j++)
