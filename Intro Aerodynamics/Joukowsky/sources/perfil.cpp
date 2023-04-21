@@ -16,6 +16,5 @@ void perfil::CalculoPuntos()
         circBase.GetY()[i]*circBase.GetY()[i]);
         y[i] = circBase.GetY()[i] - circBase.GetY()[i]/(circBase.GetX()[i]*circBase.GetX()[i] + 
         circBase.GetY()[i]*circBase.GetY()[i]);
-
     }
 }

@@ -2,6 +2,7 @@
 #define SDL_HANDLER_H
 
 #include <SDL2/SDL.h>
+#include <iostream>
 
 class SDLHandler
 {

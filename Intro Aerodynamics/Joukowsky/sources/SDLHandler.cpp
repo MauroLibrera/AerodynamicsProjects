@@ -41,6 +41,7 @@ void SDLHandler::Bucle()
 
 void SDLHandler::Render(float** x, float** y, int N)
 {
+    //std::cout <<"SDL "<< y[1][3] << std::endl;
     // Set the background color to black
     SDL_SetRenderDrawColor(pRenderer, 0, 0, 0, 150);
     SDL_RenderClear(pRenderer);
@@ -49,11 +50,14 @@ void SDLHandler::Render(float** x, float** y, int N)
     SDL_SetRenderDrawColor(pRenderer, 255, 255, 255, 255);
     for (int i=0; i<2; i++)
     {
+        //std::cout<<i<<std::endl;
         for (int j = 0; j < N; j++)
         {
             SDL_RenderDrawLine(pRenderer, static_cast<int>(x[i][j]), 
             static_cast<int>(y[i][j]), static_cast<int>(x[i][(j+1)%N]), 
             static_cast<int>(y[i][(j+1)%N]));
+
+            //std::cout << j <<" "<< static_cast<int>(x[i][j]) <<" "<< static_cast<int>(y[i][j]) << std::endl; 
         }
     }
     SDL_RenderPresent(pRenderer);

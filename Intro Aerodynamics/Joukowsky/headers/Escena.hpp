@@ -1,6 +1,7 @@
 #ifndef ESCENA_H
 #define ESCENA_H
 
+#include <iostream>
 #include <SDL2/SDL.h>
 
 #include "ElementoDibujable.hpp"
