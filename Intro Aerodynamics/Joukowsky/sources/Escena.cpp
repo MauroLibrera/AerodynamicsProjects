@@ -11,7 +11,7 @@ bool Escena::Iniciar()
 {
     escalaBasica = 80;
     
-    circulo = new Circunferencia(0.3,0.1);
+    circulo = new Circunferencia(-1.0/14.0,0.1);
     circulo->CalculoPuntos();
     
     airfoil = new perfil(*circulo);
