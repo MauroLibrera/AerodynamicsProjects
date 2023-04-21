@@ -11,11 +11,12 @@ bool Escena::Iniciar()
 {
     escalaBasica = 80;
     
-    circulo = new Circunferencia();
+    circulo = new Circunferencia(0.3,0.1);
     circulo->CalculoPuntos();
     
     airfoil = new perfil(*circulo);
     airfoil->CalculoPuntos();
+    airfoil->Escalar(1,-1);
 
     circulo->Escalar(escalaBasica,escalaBasica);
     airfoil->Escalar(escalaBasica,escalaBasica);
