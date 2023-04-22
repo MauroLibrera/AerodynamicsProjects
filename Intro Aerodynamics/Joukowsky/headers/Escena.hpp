@@ -26,6 +26,8 @@ private:
     int mouseX;
     int mouseY;
 
+    bool botonApretado;
+
     void ActualizarPuntos();
 
 public:

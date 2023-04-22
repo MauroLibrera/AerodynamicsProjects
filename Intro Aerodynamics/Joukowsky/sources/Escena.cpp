@@ -11,6 +11,8 @@ Escena::Escena()
 bool Escena::Iniciar()
 {
     escalaBasica = 80;
+
+    botonApretado = false;
     
     ejeX = new EjeX();
     ejeX->CalcularPuntos();
@@ -62,12 +64,24 @@ void Escena::Eventos(SDL_Event *event)
     case SDL_MOUSEBUTTONDOWN:
         if (event->button.button == SDL_BUTTON_LEFT)
         {
+            botonApretado = true;
             mouseX = event->button.x;
             mouseY = event->button.y;
             Bucle();
         }
         break;
-    
+    case SDL_MOUSEBUTTONUP:
+        if (event->button.button == SDL_BUTTON_LEFT)
+        {
+            botonApretado = false;
+        }
+    case SDL_MOUSEMOTION:
+        if (botonApretado)
+        {
+            mouseX = event->button.x;
+            mouseY = event->button.y;
+            Bucle();
+        }
     default:
         break;
     }
