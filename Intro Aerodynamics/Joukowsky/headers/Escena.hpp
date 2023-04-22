@@ -8,18 +8,20 @@
 #include "circunferencia.hpp"
 #include "perfil.hpp"
 #include "EjeX.hpp"
+#include "EjeY.hpp"
 
 class Escena
 {
 private:
     float escalaBasica;
 
-    float* puntosHijosX[3];
-    float* puntosHijosY[3];
+    float* puntosHijosX[4];
+    float* puntosHijosY[4];
 
     Circunferencia* circulo;
     perfil* airfoil;
     EjeX* ejeX;
+    EjeY* ejeY;
 
     void ActualizarPuntos();
 
