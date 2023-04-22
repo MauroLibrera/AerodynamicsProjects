@@ -19,6 +19,8 @@ Circunferencia::Circunferencia(float x, float y)
 
 void Circunferencia::CalculoPuntos()
 {
+    R = 1 + sqrtf(x0*x0 + y0*y0);
+
     float tita[N];
 
     float dTita = M_PI*2/static_cast<float>(N);
@@ -30,4 +32,10 @@ void Circunferencia::CalculoPuntos()
         x[i] = R*cos(tita[i]) + x0;
         y[i] = R*sin(tita[i]) + y0;
     }
+}
+
+void Circunferencia::SetCentro(float xc, float yc)
+{
+    x0 = xc;
+    y0 = yc;
 }

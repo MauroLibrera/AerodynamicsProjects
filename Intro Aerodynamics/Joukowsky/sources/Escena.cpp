@@ -18,7 +18,7 @@ bool Escena::Iniciar()
     ejeY = new EjeY();
     ejeY->CalcularPuntos();
 
-    circulo = new Circunferencia(-1.0/14.0,0.1);
+    circulo = new Circunferencia();
     circulo->CalculoPuntos();
     
     airfoil = new perfil(*circulo);
@@ -57,11 +57,37 @@ void Escena::ActualizarPuntos()
 
 void Escena::Eventos(SDL_Event *event)
 {
-
+    switch (event->type)
+    {
+    case SDL_MOUSEBUTTONDOWN:
+        if (event->button.button == SDL_BUTTON_LEFT)
+        {
+            mouseX = event->button.x;
+            mouseY = event->button.y;
+            Bucle();
+        }
+        break;
+    
+    default:
+        break;
+    }
 }
 
 void Escena::Bucle()
 {
+    float x = (static_cast<int>(mouseX) - 400)/escalaBasica;
+    float y = (static_cast<int>(mouseY) - 300)/escalaBasica;
+
+    circulo->SetCentro(x,y);
+    circulo->CalculoPuntos();
+
+    airfoil->CalculoPuntos();
+
+    circulo->Escalar(escalaBasica,escalaBasica);
+    airfoil->Escalar(escalaBasica,escalaBasica);
+
+    circulo->Trasladar(400, 300);
+    airfoil->Trasladar(400, 300);
 
 }
 

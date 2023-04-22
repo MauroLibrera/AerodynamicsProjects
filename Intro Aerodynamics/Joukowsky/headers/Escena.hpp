@@ -23,6 +23,9 @@ private:
     EjeX* ejeX;
     EjeY* ejeY;
 
+    int mouseX;
+    int mouseY;
+
     void ActualizarPuntos();
 
 public:
